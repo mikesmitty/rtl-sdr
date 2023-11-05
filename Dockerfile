@@ -8,4 +8,6 @@ RUN apt-get update && \
     find /var/lib/apt/lists/ -type f -delete && \
     rm -rf /usr/share/doc
 
+STOPSIGNAL SIGTERM
+
 ENTRYPOINT ["/usr/bin/rtl_tcp"]
